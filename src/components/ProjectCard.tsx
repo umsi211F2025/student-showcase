@@ -33,7 +33,9 @@ export function ProjectCard({ project }: { project: Project }) {
     <article className={styles['project-card']}>
       <div className={styles['project-image']}>
         <img
-          src={project.projectImage || `${import.meta.env.BASE_URL}images/placeholder.svg`}
+          src={
+            `${import.meta.env.BASE_URL}images/${project.projectImage || 'placeholder.svg'}`
+          }
           alt={project.projectTitle}
           onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
             const img = e.currentTarget;
@@ -46,7 +48,9 @@ export function ProjectCard({ project }: { project: Project }) {
       <div className={styles['project-content']}>
         <div className={styles['project-header']}>
           <img
-            src={project.studentPhoto || `${import.meta.env.BASE_URL}images/silhouette-student.svg`}
+            src={
+              `${import.meta.env.BASE_URL}images/${project.studentPhoto || 'silhouette-student.svg'}`
+            }
             alt={project.studentName}
             className={styles['student-photo']}
             onError={(e: React.SyntheticEvent<HTMLImageElement>) => {

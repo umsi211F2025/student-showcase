@@ -5,8 +5,8 @@
   "projectType": ["Simulation", "Data Visualization"],
   "projectUrl": "https://example.com/basketball-sim",
   "githubUrl": "https://github.com/example/basketball-sim",
-  "projectImage": "/images/placeholder.svg",
+  "projectImage": "placeholder.svg",
   "tags": ["Python", "Simulation", "Statistics", "Jupyter"],
-  "studentPhoto": "/images/placeholder.svg",
+  "studentPhoto": "placeholder.svg",
   "videoUrl": "https://vimeo.com/123456789"
 }

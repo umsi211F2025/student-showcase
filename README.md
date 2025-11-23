@@ -2,15 +2,44 @@
 
 A React-based showcase website for displaying student final projects from UMSI 211 Fall 2025.
 
-See `CONTRIBUTING.MD` for how to add your project!
+It should be deployed via GitHub Pages at https://umsi211f2025.github.io/student-showcase/
 
-## Features
+# How to Add Your Project
 
-- 🎨 **Professional Design** - Clean, modern UI with Michigan branding
-- 🔍 **Filtering** - Filter projects by type (Web App, Data Visualization, Simulation, etc.)
-- 📱 **Fully Responsive** - Works on desktop, tablet, and mobile
-- ⚡ **Fast Loading** - All project data bundled at build time
-- 🔧 **Easy to Update** - Just add a JSON file to add a new project
+Students add their final projects to this showcase via pull requests.
+
+
+1. Fork this repository to your own GitHub account.
+2. Open the fork in a github codespace (or clone your fork locally).
+3. Add your JSON file and screenshot(s).
+  - Create a new JSON file in `src/data/projects/`. It should follow this format:
+  ```json
+{
+  "studentName": "Your Name",
+  "projectTitle": "Your Project Title",
+  "description": "A brief 1-2 sentence description of your project.",
+  "projectType": ["Web App", "Data Visualization"],
+  "projectUrl": "https://your-project-url.com",
+  "githubUrl": "https://github.com/yourusername/repo",
+  "projectImage": "your-screenshot.jpg",
+  "tags": ["React", "Python", "D3.js"],
+  "reflections": "Optional: a quote about what you learned or are proud of.",
+  "studentPhoto": "your-photo.jpg",
+  "videoUrl": "https://youtube.com/watch?v=..."
+}
+```
+  - Add images to `public/images/` and reference them in your JSON file.
+4. Run local validation:
+  - `npm install`
+  - `npm run validate`
+  - `npm run dev` and check that your project displays correctly in a browser.
+5. Commit and push to your fork on GitHub.
+6. On the GitHub website, open a Pull Request from your fork/branch to this repo's `main`. GitHub Actions will:
+  - Validate your JSON against the schema
+  - Check that your referenced image exists and is a reasonable size
+  - Build the site to ensure it compiles
+  - (If checks fail, please read the logs, fix issues, push the changes, and then check the pull request to see if the checks pass.)
+
 
 ## Project Structure
 
@@ -42,7 +71,7 @@ student-showcase/
 └── package.json
 ```
 
-## Getting Started
+## Getting Started (Running Locally or in Codespaces)
 
 ### Prerequisites
 
@@ -62,107 +91,6 @@ npm install
 npm run dev
 ```
 
-This starts the development server at `http://localhost:5173`
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-The built site will be in the `dist/` directory, ready to deploy.
-
-## Adding a New Project
-
-### Step 1: Create JSON File
-
-Create a new JSON file in `src/data/projects/` with this format:
-
-```json
-{
-  "studentName": "Your Name",
-  "projectTitle": "Your Project Title",
-  "description": "A brief 1-2 sentence description of your project.",
-  "projectType": ["Web App", "Data Visualization"],
-  "projectUrl": "https://your-project-url.com",
-  "githubUrl": "https://github.com/yourusername/repo",
-  "projectImage": "/images/your-screenshot.jpg",
-  "tags": ["React", "Python", "D3.js"],
-  "reflections": "Optional: a quote about what you learned or are proud of.",
-  "studentPhoto": "/images/your-photo.jpg",
-  "videoUrl": "https://youtube.com/watch?v=..."
-}
-```
-
-See `src/data/projects/SCHEMA.md` for detailed field descriptions.
-
-### Step 2: Add Screenshot (Optional)
-
-1. Take a screenshot of your project (recommended: 800x600px)
-2. Save it to `public/images/`
-3. Reference it in your JSON: `"projectImage": "/images/your-screenshot.jpg"`
-
-### Step 3: Test
-
-```bash
-npm run dev
-```
-
-Your project should appear in the showcase!
-
-### Step 4: Deploy
-
-After adding/updating projects:
-
-```bash
-npm run build
-git add .
-git commit -m "Add new project: Your Project Title"
-git push
-```
-
-## Project Types
-
-Available project type filters:
-
-- **Web App** - Interactive web applications
-- **Data Visualization** - Charts, graphs, interactive visualizations
-- **Simulation** - Monte Carlo simulations, modeling
-- **API/Backend** - Server-side applications, APIs
-- **Mobile App** - Mobile applications
-- **Other** - Other types of projects
-
-You can use multiple types for a single project.
-
-## Deployment
-
-### GitHub Pages
-
-1. Update `vite.config.ts` to set the base path:
-
-```typescript
-export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
-  base: '/student-showcase/', // Replace with your repo name
-})
-```
-
-2. Build and deploy:
-
-```bash
-npm run build
-# Copy dist/ contents to gh-pages branch or use gh-pages package
-```
-
-### Netlify
-
-1. Connect your GitHub repository to Netlify
-2. Build command: `npm run build`
-3. Publish directory: `dist`
-
-### Other Platforms
-
-The `dist/` folder after `npm run build` contains static files that can be hosted anywhere.
 
 ## Design System
 
@@ -173,75 +101,21 @@ The site uses a professional design system with:
 - **Spacing**: 8px base unit for consistent spacing
 - **Responsive**: Mobile-first with breakpoints at 480px and 768px
 
-## Customization
-
-### Change Course Information
-
-Edit `src/pages/HomePage.tsx`:
-
-```typescript
-<h1 className="title">UMSI 211 Fall 2025</h1>
-<p className="subtitle">Final Project Showcase</p>
-```
-
-### Modify Colors
-
-Edit CSS variables in `src/styles/tokens.css`:
-
-```css
-:root {
-  --color-primary: #00274C;
-  --color-secondary: #FFCB05;
-  /* ... */
-}
-```
-
-### Update Footer
-
-Edit the footer section in `src/pages/HomePage.tsx`:
-
-```javascript
-<footer className="footer">
-  <div className="container">
-    <p>Your Course Name | Your Semester</p>
-    <p>Your University</p>
-  </div>
-</footer>
-```
 
 ## Technical Details
 
 - **Framework**: React 19 with TypeScript
-- **Build Tool**: Vite (fast, modern build system)
+- **Build Tool**: Vite
 - **Dynamic Imports**: Uses `import.meta.glob` for automatic JSON file discovery
 - **No Runtime Dependencies**: All project data bundled at build time
 - **CSS**: CSS Modules for component styles + design tokens (custom properties)
 - **Path Aliases**: Uses `@/` prefix for absolute imports (configured via `vite-tsconfig-paths`)
 
-## Troubleshooting
-
-### Project not showing up
-
-- Make sure your JSON file is in `src/data/projects/`
-- Check that it ends with `.json`
-- Verify JSON is valid (use a JSON validator)
-- Restart the dev server
-
-### Images not loading
-
-- Images should be in `public/images/`
-- Use path starting with `/images/` in JSON
-- Check file name spelling and case
-
-### Build fails
-
-- Run `npm install` to ensure dependencies are installed
-- Check for JSON syntax errors
-- Review console for specific error messages
 
 ## License
 
-This project is for educational use by UMSI 211 students and instructors.
+This project is open source and licensed under the [MIT License](https://opensource.org/licenses/MIT).
+You are free to use, modify, and share the code and contents with attribution.
 
 ## Credits
 
