@@ -3,11 +3,11 @@
   "projectTitle": "Quantum & Classical Particle Simulation",
   "description": "Interactive simulation demonstrating the behavior of quantum and classical particles with real-time visualization and University of Michigan styling.",
   "projectType": ["Web App"],
-  "projectUrl": "https://abluewolverine.github.io/final-project-abluewolverine",
-  "githubUrl": "https://github.com/abluewolverine/final-project-abluewolverine",
+  "projectUrl": "https://abluewolverine.github.io/dj-controller-project/problem-set-5-simulations-abluewolverine-main-2/original-simulation/build/index.html",
+  "githubUrl": "https://github.com/abluewolverine/dj-controller-project",
   "projectImage": "particle-simulation.png",
   "tags": ["React", "Physics Simulation", "Data Visualization"],
   "reflections": "Built an interactive particle simulation with quantum mechanics visualization, learned React state management and scientific computing.",
-  "studentPhoto": "wolverine.webp",
+  "studentPhoto": "showcase.jpg",
   "videoUrl": "https://youtube.com/watch?v=..."
 }
