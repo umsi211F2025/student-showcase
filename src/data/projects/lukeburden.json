@@ -1,13 +1,20 @@
-
 {
   "studentName": "Luke Burden",
   "projectTitle": "Fitness & Nutrition Coach",
-  "description": "An app to coach fitness and nutrition all-in-one: calculates BMR/TDEE, suggests macros and workouts, and offers optional LLM coaching with moderation and admin auditing.",
-  "projectType": ["Web App"],
-  "projectUrl": "https://github.com/umsi211F2025/final-project-lukeburd#readme",
+  "description": "A compact full‑stack app for BMR/TDEE, calorie targets, macros, and workout guidance. An LLM‑based coach is planned and partially wired (placeholder today), with moderation and admin auditing ready for future integration.",
+  "projectType": [
+    "Web App"
+  ],
+  "projectUrl": "https://expert-dollop-v675p54prgwph6q6j-3000.app.github.dev/",
   "githubUrl": "https://github.com/umsi211F2025/final-project-lukeburd",
-  "projectImage": "luke-burden.png",
-  "tags": ["React", "Node.js", "Express", "SQLite", "LLM"],
-  "reflections": "Built a compact full-stack MVP focusing on practical coaching and safety-aware LLM auditing.",
+  "projectImage": "luke-burden1.png",
+  "tags": [
+    "React",
+    "Node.js",
+    "Express",
+    "SQLite",
+    "LLM"
+  ],
+  "reflections": "I prioritized shipping a reliable core (calculations, guidance, admin) and laying the groundwork for a safe LLM coach. Full model integration is deferred due to time, but moderation, rate limits, and audit tooling are already in place—so adding a real LLM later will be possible and safe.",
   "studentPhoto": ""
 }
