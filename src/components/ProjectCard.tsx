@@ -92,36 +92,45 @@ export function ProjectCard({ project }: { project: Project }) {
           </div>
         )}
 
-        <div className={styles['project-links']}>
-          {project.videoUrl && (
+        <div className={styles['project-links-grid']}>
+          {/* Video button or blank */}
+          {project.videoUrl ? (
             <a
               href={project.videoUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="project-link primary"
             >
-              Watch Video →
+              Video
             </a>
+          ) : (
+            <span />
           )}
-          {project.projectUrl && (
+          {/* Run button or blank */}
+          {project.projectUrl ? (
             <a
               href={project.projectUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="project-link primary"
             >
-              View Project →
+              Run
             </a>
+          ) : (
+            <span />
           )}
-          {project.githubUrl && (
+          {/* GitHub button or blank */}
+          {project.githubUrl ? (
             <a
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="project-link secondary"
+              className="project-link primary"
             >
               GitHub
             </a>
+          ) : (
+            <span />
           )}
         </div>
       </div>
