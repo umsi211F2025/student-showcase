@@ -96,12 +96,7 @@ export function HomePage() {
         </div>
       </header>
 
-      <FilterBar
-        selected={selectedFilter}
-        onChange={setSelectedFilter}
-        projectTypes={projectTypes}
-        projects={projects}
-      />
+      {/* FilterBar removed as per new requirements */}
 
       <main className="main">
         <div className="container">
