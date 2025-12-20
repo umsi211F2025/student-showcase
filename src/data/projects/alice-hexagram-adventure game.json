@@ -8,5 +8,7 @@
   "projectImage": "alice-game.jpg",
   "tags": ["HTML5", "CSS3", "JavaScript", "Game Design", "Interactive Fiction"],
   "reflections": "I designed the narrative world, six symbolic spaces, and dual interaction system (click-based UI + text commands), and implemented the core game logic and visual effects with pure HTML/CSS/JavaScript, which taught me how to balance storytelling depth, accessibility, and responsive interaction in a single-page experience.",
-  "studentPhoto": "alice-photo.jpg"
+  "studentPhoto": "alice-photo.jpg",
+  "videoUrl": "https://youtu.be/eYSMzw6v03Q"
+  
 }
