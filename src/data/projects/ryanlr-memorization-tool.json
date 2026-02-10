@@ -1,0 +1,12 @@
+{
+  "studentName": "Ryan Rose",
+  "projectTitle": "Memorization Tool",
+  "description": "Interactive flashcard memorization tool for study practice.",
+  "projectType": ["Web App"],
+  "projectUrl": "https://final-project-ryanlr-opssmartquiz.onrender.com",
+  "githubUrl": "https://github.com/umsi211F2025/final-project-ryanlr-ops.git",
+  "projectImage": "memorization-tool-1.png",
+  "tags": ["React", "TypeScript", "Flashcards"],
+  "reflections": "Built an adaptive flashcard system to improve retention.",
+  "videoUrl": "https://files.fm/u/3bx35kc8hd"
+}

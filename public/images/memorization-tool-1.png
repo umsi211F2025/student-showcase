@@ -1,0 +1,6 @@
+This is a placeholder file. Please replace this file with your actual screenshot named `memorization-tool-1.png` in `public/images/`.
+
+To replace it locally, copy your screenshot into:
+  public/images/memorization-tool-1.png
+
+Then run `npm run validate` to ensure the image is detected.
