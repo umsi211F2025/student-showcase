@@ -1,0 +1,11 @@
+{
+  "studentName": "Joe Dillon",
+  "projectTitle": "Cook Look",
+  "description": "A recipe discovery web app where users can browse, filter, and save recipes with a clean, modern interface.",
+  "projectType": ["Web App"],
+  "projectUrl": "https://YOUR-DEPLOYED-URL-HERE",
+  "githubUrl": "https://github.com/joedillon05/cook-look",
+  "projectImage": "cook-look-home.png",
+  "tags": ["React", "TypeScript", "Vite", "CSS Modules"],
+  "reflections": "I learned a ton about React components, props, state, and building a full front-end project from scratch."
+}
