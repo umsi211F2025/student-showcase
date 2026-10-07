@@ -1,26 +1,21 @@
 
 name: Validate PR
 
+# `pull_request`, not `pull_request_target`: a pull request from a fork runs here with a
+# read-only token and no secrets, so nothing in it can write to this repository.
 on:
-  pull_request_target:
+  pull_request:
     types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
 
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-
-
-      - name: Checkout main branch (for scripts)
+      - name: Check out the pull request
         uses: actions/checkout@v4
-        with:
-          ref: main
-
-      - name: Checkout PR code (for validation)
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          path: .
 
       - name: Use Node.js 20
         uses: actions/setup-node@v4
